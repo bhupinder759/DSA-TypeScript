@@ -55,3 +55,27 @@ function rotate(nums: number[], k: number): void {
         right--;
     }
 }
+
+//second approch but not use
+
+function rotate1(nums: number[], k: number): void {
+    const n = nums.length;
+    k %= n;
+
+    let count = 0;
+    let start = 0;
+
+    while (count < n) {
+        let current = start;
+        let prev = nums[current];
+
+        do {
+            const next = (current + k) % n;
+            [nums[next], prev] = [prev, nums[next]];
+            current = next;
+            count++;
+        } while (current !== start);
+
+        start++;
+    }
+}
