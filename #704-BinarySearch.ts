@@ -17,7 +17,7 @@ Output: -1
 Explanation: 2 does not exist in nums so return -1
 */
 
-function search(nums: number[], target: number): number {
+function search1(nums: number[], target: number): number {
     let left = 0;
     let right = nums.length - 1;
     let mid = 0;
