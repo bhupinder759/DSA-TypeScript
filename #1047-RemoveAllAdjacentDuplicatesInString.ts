@@ -22,7 +22,7 @@ Input: s = "azxxzy"
 Output: "ay"
 */
 
-function removeDuplicates(s: string): string {
+function removeDuplicates12(s: string): string {
     let stack :string[] = [];
 
     for(let i = 0; i < s.length; i++) {
